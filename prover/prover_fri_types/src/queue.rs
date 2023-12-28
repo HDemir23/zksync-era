@@ -19,8 +19,8 @@ impl<T> FixedSizeQueue<T> {
     ///
     /// # Returns
     ///
-    /// * A new instance of `FixedSizeQueue`.
-    pub fn new(capacity: usize) -> Self {
+    /// * A new instance of 'FixedSizeQueue'.
+    pub fn new(capacity: usize) -> Self {  
         FixedSizeQueue {
             deque: VecDeque::new(),
             capacity,
