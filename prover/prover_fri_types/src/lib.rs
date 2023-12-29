@@ -136,3 +136,9 @@ pub fn get_current_pod_name() -> String {
     }
 }
 
+/*These changes aim to handle the potential 
+absence of the POD_NAME environment variable
+ more gracefully by providing a default value
+  instead of panicking.
+*/
+
