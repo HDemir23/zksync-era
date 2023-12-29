@@ -130,5 +130,9 @@ impl StoredObject for AuxOutputWitnessWrapper {
 }
 
 pub fn get_current_pod_name() -> String {
-    env::var("POD_NAME").unwrap_or("UNKNOWN_POD".to_owned())
+    match env::var("POD_NAME") {
+        Ok(name) => name,
+        Err(_) => "UNKNOWN_POD".to_owned(),
+    }
 }
+
